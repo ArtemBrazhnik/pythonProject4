@@ -1,0 +1,18 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Водка",
+      "description": "крепкий алкогольный напиток"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Джин",
+      "description": "крепкий алкогольный напиток"
+    }
+  }
+]
