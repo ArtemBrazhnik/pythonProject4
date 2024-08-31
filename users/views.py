@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView
 
+from catalog.forms import StyleFormMixin
 from users.forms import UserRegisterForm
 from users.models import User
 from config.settings import EMAIL_HOST_USER
@@ -42,7 +43,7 @@ def email_verification(request, token):
     return redirect(reverse('users:login'))
 
 
-class NewPasswordView(PasswordResetView):
+class NewPasswordView(PasswordResetView, StyleFormMixin):
     form_class = PasswordResetForm
     template_name = "users/new_password.html"
     success_url = reverse_lazy("users:login")
